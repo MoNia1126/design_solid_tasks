@@ -1,32 +1,43 @@
-# Factory Pattern in Dart
+# Simple Payment System
 
-## 📌 Project Overview
-This project demonstrates the **Factory Design Pattern** in Dart. The `ShapeFactory` class provides a way to create instances of different `Shape` types (`Circle`, `Rectangle`, `Square`) based on a given input string.
+## Description
+This is a simple payment system implemented in Dart following SOLID principles. The system allows processing payments using different methods such as **cash payment** and **credit card payment**.
 
-## 📂 Project Structure
-```sh
-Task2/
-│-- shape.dart
-│-- shape_factory.dart
-│-- main.dart
-│-- README.md
+## Features
+- Implements **SOLID** principles for clean and maintainable code.
+- Uses **abstraction** to support multiple payment methods.
+- Easily **extendable** to add new payment options without modifying existing code.
+
+## SOLID Principles Applied
+1. **Single Responsibility Principle (SRP):** Each class has a single responsibility.
+2. **Open/Closed Principle (OCP):** New payment methods can be added without modifying existing classes.
+3. **Liskov Substitution Principle (LSP):** Any payment method can replace another without breaking the system.
+4. **Interface Segregation Principle (ISP):** The `PaymentMethod` interface defines only the necessary method.
+5. **Dependency Inversion Principle (DIP):** `PaymentProcessor` depends on the `PaymentMethod` abstraction.
+
+## How to Run
+1. **Clone the Repository**
+   ```sh
+   git clone https://github.com/MoNia1126/design_solid_tasks/tree/payment
+   
+   ```
+3. **Run the Dart Script**
+   ```sh
+    payment.dart
+   ```
+
+## Example Output
+```
+Paid $100.00 in cash.
+Paid $250.00 using credit card.
 ```
 
-### 🔹 `shape.dart`
-Defines the `Shape` interface and its concrete implementations (`Circle`, `Rectangle`, `Square`).
+## Project Structure
+```
+├── payment.dart        # Main Dart file containing the payment system logic
+├── README.md           # Project documentation
+└── output.png      # Screenshot of the output 
+```
 
-### 🔹 `shape_factory.dart`
-Implements the `ShapeFactory` class to generate `Shape` objects based on input.
-
-### 🔹 `main.dart`
-Contains the `main()` function that demonstrates how to use the `ShapeFactory` to create `Shape` objects dynamically.
-
----
-
-## 🚀 How to Run the Project
-
-1️⃣ **Navigate to the project directory:**
-```sh
-cd C:\Users\MG Magic\Desktop\design_solid_tasks\Task2
-dart main.dart
-
+## Author
+**Monia Mohamed**
